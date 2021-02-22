@@ -1,0 +1,10 @@
+---
+title: Overview
+layout: page
+order: 1
+---
+
+[[studio.overview]]
+= Studio
+
+Studio is the official Vaadin extension for VS Code, aimed for projects using LitElement templates for their UI logic, in either <<../../flow/overview#,Flow>> or <<../../fusion/overview#,Fusion>> stacks.
