@@ -34,7 +34,7 @@ type PeopleOptions = {
 
 type PeopleResults = {
   people: Person[];
-  hierarhcyLevelSize: number;
+  hierarchyLevelSize: number;
 };
 export async function getPeople(options?: PeopleOptions): Promise<PeopleResults> {
   if (!peopleImages) {
@@ -48,7 +48,7 @@ export async function getPeople(options?: PeopleOptions): Promise<PeopleResults>
     people = people.filter((person) => person.managerId == options?.managerId);
   }
 
-  const hierarhcyLevelSize = people.length;
+  const hierarchyLevelSize = people.length;
   const startIndex = options?.startIndex || 0;
   const count = options?.count ? startIndex + options.count : undefined;
 
@@ -62,7 +62,7 @@ export async function getPeople(options?: PeopleOptions): Promise<PeopleResults>
   });
   return {
     people,
-    hierarhcyLevelSize,
+    hierarchyLevelSize,
   };
 }
 
