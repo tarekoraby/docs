@@ -84,13 +84,13 @@ import org.springframework.security.core.context.SecurityContextHolder;
 @Endpoint
 public class MyAppEndpoint {
 
-    @AnonymousAllowed
+__    @AnonymousAllowed
     public String checkUser() {
         Authentication auth =
             SecurityContextHolder.getContext().getAuthentication();
         return auth == null ? null : auth.getName();
     }
-}
+__}
 ----
 
 [source,typescript]

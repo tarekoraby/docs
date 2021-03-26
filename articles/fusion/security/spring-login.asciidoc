@@ -271,7 +271,7 @@ The authentication helper methods in the code examples are grouped in a separate
 .`frontend/auth.ts`
 [source, typescript]
 ----
-include::{root}/frontend/demo/fusion/authentication/auth.ts[]
+include::{root}/frontend/demo/fusion/authentication/auth.ts[tags=timestamp]
 ----
 
 Using localStorage allows navigating to sub views without having to check authentication from the backend on every navigation so that the authentication check could also work offline.
