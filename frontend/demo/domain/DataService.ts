@@ -1,6 +1,7 @@
 import Country from 'Frontend/generated/com/vaadin/demo/domain/Country';
 import Person from 'Frontend/generated/com/vaadin/demo/domain/Person';
 import Card from 'Frontend/generated/com/vaadin/demo/domain/Card';
+import ViewEvent from 'Frontend/generated/com/vaadin/demo/domain/ViewEvent';
 
 const datasetCache: { [key: string]: any[] } = {};
 async function getDataset<T>(fileName: string, count?: number): Promise<T[]> {
@@ -61,4 +62,8 @@ export async function getPeople(options?: PeopleOptions): Promise<PeopleResults>
     people,
     hierarchyLevelSize,
   };
+}
+
+export async function getViewEvents(): Promise<ViewEvent[]> {
+  return getDataset<ViewEvent>('viewEvents.json');
 }
