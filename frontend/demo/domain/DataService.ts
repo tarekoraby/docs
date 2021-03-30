@@ -1,6 +1,7 @@
 import Country from 'Frontend/generated/com/vaadin/demo/domain/Country';
 import Person from 'Frontend/generated/com/vaadin/demo/domain/Person';
 import Card from 'Frontend/generated/com/vaadin/demo/domain/Card';
+import ServiceHealth from 'Frontend/generated/com/vaadin/demo/domain/ServiceHealth';
 import ViewEvent from 'Frontend/generated/com/vaadin/demo/domain/ViewEvent';
 
 const datasetCache: { [key: string]: any[] } = {};
@@ -66,4 +67,8 @@ export async function getPeople(options?: PeopleOptions): Promise<PeopleResults>
 
 export async function getViewEvents(): Promise<ViewEvent[]> {
   return getDataset<ViewEvent>('viewEvents.json');
+}
+
+export async function getServiceHealth(): Promise<ServiceHealth[]> {
+  return getDataset<ServiceHealth>('serviceHealth.json');
 }
